@@ -1,38 +1,123 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  background: #050617;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.calc-wrapper {
+  width: 390px;                 /* un poco más ancha */
+  background: #0b0f24;
+  padding: 28px;
+  border-radius: 25px;
+  border: 2px solid #3b3ef3;
+  box-shadow: 0 0 25px rgba(99,102,241,0.35);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* LOGO */
+.logo-box {
+  margin-bottom: 20px;
+}
+
+.app-logo {
+  width: 150px;
+  padding: 14px;
+  border-radius: 20px;
+  background: #050617;
+  border: 3px solid #d946ef; /* FUCSIA */
+  box-shadow:
+    0 0 20px rgba(217,70,239,0.8),
+    0 0 40px rgba(217,70,239,0.5);  /* glow más fuerte */
+}
+
+/* PANTALLA */
+.screen {
+  width: 100%;
+  height: 85px;
+  background: #11152f;
+  color: #ffffff;               /* blanco como pediste */
+  font-size: 37px;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #6366f1;
+  box-shadow: inset 0 0 12px rgba(99,102,241,0.35);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* GRID PERFECTAMENTE SIMÉTRICO */
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px; /* MISMA DISTANCIA HORIZONTAL Y VERTICAL */
+}
+
+/* BOTONES */
+.btn {
+  background: #1b2142; /* TODOS IGUALES */
+  color: #e2e8f0;
+  font-size: 28px;
+  height: 70px;
+  border-radius: 14px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.25s;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
 }
 
-.App-link {
-  color: #61dafb;
+/* TODOS → hover elegante */
+.btn:hover {
+  background: #28305a;
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(99,102,241,0.35);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* SOLO LA COLUMNA DERECHA (OPERADORES)
+   hover diferente, tech, inteligente */
+.grid .btn:nth-child(4n):hover {
+  background: #3b2770;
+  color: #d946ef;
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(217,70,239,0.55);
+}
+
+/* BOTÓN CLEAR */
+.btn-clear {
+  width: 100%;
+  background: #4338ca;
+  color: #ffffff;
+  margin-top: 20px;
+  padding: 14px 0;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+  box-shadow: 0 0 15px rgba(99,102,241,0.4);
+}
+
+.btn-clear:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(99,102,241,0.7);
 }

@@ -1,3 +1,5 @@
+<img width="101" height="101" alt="alesoft" src="https://github.com/user-attachments/assets/d7c9ce1f-4fe2-4e6e-a960-66c6f4adb9f7" />
+
 # 🌟 Calculator App
 
 ## Overview
@@ -83,3 +85,7 @@ La aplicación quedará ejecutándose localmente. 🚀
 ## Autor
 Desarrollado por: Alejandro Camacho  
 GitHub: AlexandroCamacho1000 👨‍💻
+
+<img width="472" height="840" alt="image" src="https://github.com/user-attachments/assets/855e92cd-5f8d-4430-93fa-74363e81a11b" />
+
+
